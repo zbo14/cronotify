@@ -1,0 +1,22 @@
+{
+  "name": "cronsync",
+  "version": "0.1.0",
+  "module": "lib.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun index.ts",
+    "dev": "bun dev.ts",
+    "format": "bunx @biomejs/biome format --write *.ts src"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@types/bun": "latest",
+    "@types/node-notifier": "^8.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}
