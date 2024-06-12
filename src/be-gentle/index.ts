@@ -1,1 +1,1 @@
-console.log('be gentle with yourself :)');
+console.log(':)');

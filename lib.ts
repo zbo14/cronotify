@@ -8,8 +8,9 @@ export const notify_path = path.join(root_dir, 'notify.ts');
 
 export interface Config {
 	title?: string;
+	icon?: string;
 	subtitle?: string;
-	sound?: boolean|string;
+	sound?: boolean | string;
 	schedule: string;
 	open?: string;
 }
@@ -33,7 +34,8 @@ export async function sync_crontab(): Promise<void> {
 	const promises = dir_names.map(async (dir_name) => {
 		const dir = path.join(src_dir, dir_name);
 		const script_path = path.join(dir, 'index.ts');
-		const cmd = `${bun_path} ${script_path} | ${bun_path} ${notify_path} ${dir_name} ${dir}`;
+		const env_path = path.join(dir, '.env');
+		const cmd = `${bun_path} --env-file ${env_path} ${script_path} | ${bun_path} ${notify_path} ${dir_name} ${dir}`;
 		const { schedule }: Config = await load_config(dir);
 
 		return `${schedule} ${cmd}`;
