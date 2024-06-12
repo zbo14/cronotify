@@ -8,11 +8,19 @@ Clone the repository and `bun install`.
 
 ## Usage
 
-`bun start` adds your cron tab definitions to crontab.
+### `bun start`
 
-`bun dev` watches for changes in your cron job definitions and automatically adds them to crontab.
+Adds your cron tab definitions to crontab.
 
-Neither command will add duplicate cron job definitions nor remove cron jobs that aren't associated with `cronotify`.
+### `bun dev`
+
+Watches for changes in your cron job definitions and automatically adds them to crontab.
+
+`bun start` and `bun dev` *won't* add duplicate cron job definitions nor remove cron jobs that aren't associated with `cronotify`.
+
+### `bun format`
+
+Formats all the TypeScript files in the root and `src` directories.
 
 ## Folder structure
 

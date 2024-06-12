@@ -1,8 +1,17 @@
 {
-  "name": "cronsync",
+  "name": "cronotify",
   "version": "0.1.0",
+  "description": "Easily write and schedule cron jobs with desktop notifications.",
   "module": "lib.ts",
   "type": "module",
+  "keywords": [
+    "cron",
+    "cron job",
+    "scheduling",
+    "bun",
+    "notifications",
+    "desktop notifications"
+  ],
   "scripts": {
     "start": "bun index.ts",
     "dev": "bun dev.ts",
