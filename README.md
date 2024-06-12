@@ -40,11 +40,11 @@ This file specifies when the cron job is run and includes several notification o
 
 ```ts
 export interface Config {
-	schedule: string;         // when cron job runs (unix-cron string format)
-	title?: string;           // notiifcation title, default: folder name
-	subtitle?: string;        // notification subtitle
-	sound?: boolean | string; // notification sound, default: true
-	open?: string;            // notification opens URL on click
+  schedule: string;         // when cron job runs (unix-cron string format)
+  title?: string;           // notiifcation title, default: folder name
+  subtitle?: string;        // notification subtitle
+  sound?: boolean | string; // notification sound, default: true
+  open?: string;            // notification opens URL on click
 }
 ```
 
